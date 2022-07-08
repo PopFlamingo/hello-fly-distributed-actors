@@ -1,3 +1,3 @@
-# hello-fly-distributed-actors
+# Swift Distributed Actors on Fly.io
 
-A description of this package.
+Test app for Swift Distributed Actors on Fly.io
