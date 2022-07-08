@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug hello-fly-distributed-actors",
+            "program": ".build/debug/hello-fly-distributed-actors",
+            "args": [],
+            "cwd": "${workspaceFolder:hello-fly-distributed-actors}",
+            "preLaunchTask": "swift: Build Debug hello-fly-distributed-actors"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release hello-fly-distributed-actors",
+            "program": ".build/release/hello-fly-distributed-actors",
+            "args": [],
+            "cwd": "${workspaceFolder:hello-fly-distributed-actors}",
+            "preLaunchTask": "swift: Build Release hello-fly-distributed-actors"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug HelloFlyDistributedActors",
+            "program": ".build/debug/HelloFlyDistributedActors",
+            "args": [],
+            "cwd": "${workspaceFolder:hello-fly-distributed-actors}",
+            "preLaunchTask": "swift: Build Debug HelloFlyDistributedActors"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release HelloFlyDistributedActors",
+            "program": ".build/release/HelloFlyDistributedActors",
+            "args": [],
+            "cwd": "${workspaceFolder:hello-fly-distributed-actors}",
+            "preLaunchTask": "swift: Build Release HelloFlyDistributedActors"
+        }
+    ]
+}
