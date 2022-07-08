@@ -12,11 +12,12 @@ public struct HelloFlyDistributedActors {
         
         let discovery = try await FlyAppDiscovery(eventLoopGroup: eventLoopGroup, port: 7337)
         settings.bindHost = discovery.selfIP
-        settings.logging.logLevel = .debug
+        settings.logging.logLevel = .critical
         settings.discovery = ServiceDiscoverySettings(discovery, service: .currentApp())
         let system = await ClusterSystem("HelloCluster", settings: settings)
         for await event in system.cluster.events {
             print(event)
+            print(system.cluster.membershipSnapshot)
         }
     }
 }
