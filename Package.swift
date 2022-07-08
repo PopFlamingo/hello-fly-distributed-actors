@@ -15,7 +15,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
             name: "HelloFlyDistributedActors",
-            dependencies: []),
+            dependencies: [
+                .product(name: "DistributedActors", package: "swift-distributed-actors"),
+                .product(name: "FlyAppDiscovery", package: "swift-fly-app-discovery")
+            ]
+        ),
         .testTarget(
             name: "HelloFlyDistributedActorsTests",
             dependencies: ["HelloFlyDistributedActors"]),
