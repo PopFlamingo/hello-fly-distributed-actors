@@ -7,3 +7,9 @@ kill_timeout = 5
 processes = []
 
 [env]
+
+[[services]]
+  internal_port = 7337
+  http_checks = []
+  tcp_checks = []
+  protocol = "tcp"
