@@ -8,7 +8,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-distributed-actors.git", revision: "1.0.0-beta.1.1"),
-        .package(url: "https://github.com/PopFlamingo/swift-fly-app-discovery.git", revision: "3bbd9d17921b86f6ad77532a9769f16c1b7957fc")
+        .package(url: "https://github.com/PopFlamingo/swift-fly-app-discovery.git", branch: "logmore")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
