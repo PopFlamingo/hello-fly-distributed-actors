@@ -17,7 +17,7 @@ public struct HelloFlyDistributedActors {
         let system = await ClusterSystem("HelloCluster", settings: settings)
         for await event in system.cluster.events {
             print(event)
-            print(system.cluster.membershipSnapshot)
+            print(await system.cluster.membershipSnapshot)
         }
     }
 }
