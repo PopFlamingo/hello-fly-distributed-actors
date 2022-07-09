@@ -13,3 +13,7 @@ processes = []
   http_checks = []
   tcp_checks = []
   protocol = "tcp"
+
+[metrics]
+port = 9091 # default for most prometheus clients
+path = "/metrics" # default for most prometheus clients
