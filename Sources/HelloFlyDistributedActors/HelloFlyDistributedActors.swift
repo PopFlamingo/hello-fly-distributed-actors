@@ -16,8 +16,9 @@ public struct HelloFlyDistributedActors {
         settings.discovery = ServiceDiscoverySettings(discovery, service: .currentApp())
         let system = await ClusterSystem("HelloCluster", settings: settings)
         for await event in system.cluster.events {
-            print(event)
-            print(await system.cluster.membershipSnapshot)
+            print("Got event:", event)
+            print("Will now get a membership snapshot...")
+            print("Got snapshot:", await system.cluster.membershipSnapshot)
         }
     }
 }
