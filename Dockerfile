@@ -4,4 +4,4 @@ WORKDIR /build
 COPY . .
 RUN swift build --configuration $CONFIG
 ENV $CONFIG ${CONFIG}
-CMD .build/$CONFIG/HelloFlyDistributedActors
+CMD .build/${CONFIG}/HelloFlyDistributedActors
