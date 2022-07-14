@@ -3,5 +3,5 @@ ARG CONFIG=debug
 WORKDIR /build
 COPY . .
 RUN swift build --configuration $CONFIG
-ENV $CONFIG=${CONFIG}
+ENV CONFIG=${CONFIG}
 CMD .build/$CONFIG/HelloFlyDistributedActors
