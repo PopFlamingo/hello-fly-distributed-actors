@@ -1,5 +1,6 @@
 FROM swiftlang/swift:nightly-5.7-focal
+ARG CONFIG=debug
 WORKDIR /build
 COPY . .
-RUN swift build --configuration debug
-ENTRYPOINT [ ".build/debug/HelloFlyDistributedActors" ]
+RUN swift build --configuration $CONFIG
+CMD .build/$CONFIG/HelloFlyDistributedActors
