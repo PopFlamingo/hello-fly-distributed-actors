@@ -9,8 +9,10 @@ public struct HelloFlyDistributedActors {
 
     public static func main() async throws {
         Task.detached {
-            print("Heartbeat")
-            try await Task.sleep(nanoseconds: 30_000_000_000)
+            while true {
+                print("Heartbeat")
+                try await Task.sleep(nanoseconds: 30_000_000_000)
+            }
         }
         let task = Task.detached {
             let eventLoopGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
@@ -23,8 +25,6 @@ public struct HelloFlyDistributedActors {
             let system = await ClusterSystem("HelloCluster", settings: settings)
             for await event in system.cluster.events {
                 print("\(time()) - Got event:", event)
-                print("\(time()) - Will now get a membership snapshot...")
-                print("\(time()) - Got snapshot:", await system.cluster.membershipSnapshot)
             }
         }
         try await task.value
