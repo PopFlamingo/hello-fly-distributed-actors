@@ -8,6 +8,10 @@ import Foundation
 public struct HelloFlyDistributedActors {
 
     public static func main() async throws {
+        Task.detached {
+            print("Heartbeat")
+            try await Task.sleep(nanoseconds: 30_000_000_000)
+        }
         let task = Task.detached {
             let eventLoopGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
              var settings = ClusterSystemSettings.default
@@ -24,7 +28,6 @@ public struct HelloFlyDistributedActors {
             }
         }
         try await task.value
-        
     }
 }
 
