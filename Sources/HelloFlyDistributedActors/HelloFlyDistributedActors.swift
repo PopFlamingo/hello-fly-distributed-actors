@@ -8,6 +8,7 @@ import Foundation
 public struct HelloFlyDistributedActors {
 
     public static func main() async throws {
+        print("Will start tasks")
         Task.detached {
             while true {
                 print("Heartbeat")
