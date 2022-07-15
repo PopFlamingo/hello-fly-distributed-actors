@@ -6,7 +6,7 @@
       "location" : "https://github.com/PopFlamingo/NioDNS.git",
       "state" : {
         "branch" : "reconnect",
-        "revision" : "e10430ab455242cda3385857673fc351b5efae95"
+        "revision" : "16ac2de914dae48650d1609128379d66d39eabe0"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/apple/swift-distributed-actors.git",
       "state" : {
         "branch" : "main",
-        "revision" : "450755050fdca1268dd3a0299fcbdf9530dc91d6"
+        "revision" : "b3adef3a1282b2774d7d063dc352718c7fbbcfb5"
       }
     },
     {
