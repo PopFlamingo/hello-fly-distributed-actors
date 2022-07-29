@@ -14,6 +14,7 @@ public struct HelloFlyDistributedActors {
         settings.bindHost = discovery.selfIP
         settings.logging.logLevel = .critical
         settings.discovery = ServiceDiscoverySettings(discovery, service: .currentApp())
+        settings.eventLoopGroup = eventLoopGroup
         let system = await ClusterSystem("HelloCluster", settings: settings)
         for await event in system.cluster.events {
             print(event)
